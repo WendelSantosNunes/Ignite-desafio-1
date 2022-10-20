@@ -1,0 +1,39 @@
+.list {
+    margin-top: 4rem;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.newsTask{
+    display: flex;
+    align-items: center;
+
+    color: var(--blue);
+}
+
+.newsTask div, .taskComplete div{
+    background-color: var(--gray-400);
+    color: var(--gray-200);
+
+    padding: 4px;
+    border-radius: 999px;
+
+    font-weight: bold;
+    font-size: 0.857rem;
+}
+
+.newsTask p, .taskComplete p{
+    margin-right: 0.5rem;
+
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.taskComplete {
+    display: flex;
+    align-items: center;
+
+    color: var(--purple);
+}
+
