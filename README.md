@@ -2,7 +2,7 @@
 
 # Conceitos do React
 
-![Página Principal](/imagem/Pagina_principal.png)
+![Página Principal](/github/Pagina_principal.png)
 
 ## 💻 **Tecnologias**
 
@@ -13,7 +13,7 @@ Esse projeto foi desenvolvido principalmente com essas tecnologias:
 
 ## 🚀 **Projeto**
 
-O projeto foi desenvolvido durante o Ignite ​da Rocketseat.
+O projeto foi desenvolvido durante o Ignite 2022 ​da Rocketseat.
 
 E esse projeto pretende aprimora os conhecimentos adquirido no primeiro capítulo do curso de React.
 
@@ -26,7 +26,7 @@ E esse projeto pretende aprimora os conhecimentos adquirido no primeiro capítul
     - Marcar e desmarcar uma tarefa como concluída
     - Remover uma tarefa da listagem
     - Mostrar o progresso de conclusão das tarefas
-    
+
 ### Requisito para o desafio:
 
 - Feito o primeiro capítulo do curso de React
