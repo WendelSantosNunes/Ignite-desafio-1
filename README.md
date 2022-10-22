@@ -1,6 +1,6 @@
 # Ignite-Desafio-1
 
-# Conceitos do React
+## Conceitos do React
 
 ![Página Principal](/github/Pagina_principal.png)
 
