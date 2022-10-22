@@ -16,7 +16,7 @@ interface Task {
 }
 
 function App() {
-  let content 
+  let content,contTrue = 0
 
   const [tasks, setTasks] = useState<Task[]>([])
 
@@ -37,7 +37,6 @@ function App() {
             item.isComplete = false;
           else
             item.isComplete = true;
-          console.log(item)
         }
 
         return item
@@ -48,6 +47,10 @@ function App() {
 
   if(tasks.length){
     content = tasks.map(item => {
+
+      if(item.isComplete === true)
+        contTrue++;
+
       return <ListTask 
           key={item.id}
           content={item.text}
@@ -65,7 +68,7 @@ function App() {
       <Header/>
       <main className={styles.container}>
         <NewTask onSetTasks={onCreateNewTask} />
-        <Task/>
+        <Task created={tasks.length || 0} onTrue={contTrue || 0} />
         {content}
       </main>
     </>
