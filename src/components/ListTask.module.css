@@ -25,21 +25,35 @@
     margin: 0 0.75rem;
 }
 
-.list svg{
-    color: #fff;
+.list > div svg{
+    color: var(--purpleDark);
 }
 
-
-.list div{
+.list .delete{
     width: 24px;
     
     display: flex;
     justify-content: center;
     align-items: center;
-}
 
-.list div:hover{
-    background-color: red;
     padding: 0.1875rem;
 }
 
+.list .delete:hover{
+    border-radius: 4px;
+    background-color: var(--gray-400);
+}
+
+.list .delete svg{
+    color: var(--gray-300);
+}
+
+.list .delete:hover svg{
+    color: red;
+}
+
+
+.list .complete {
+    color: var(--gray-300);
+    text-decoration: line-through;
+}

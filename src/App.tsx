@@ -4,30 +4,58 @@ import { Task } from './components/Task'
 import { NotTask } from './components/NotTask'
 import { ListTask } from './components/ListTask'
 
+import { v4 as uuidv4 } from 'uuid';
 import './global.css'
 import styles from './App.module.css'
+import { useState } from 'react'
 
-let task = [
-  {
-    id: 1,
-    text: 'Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.'
-  },
-  {
-    id: 2,
-    text: 'Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.'
-  }
-]
+interface Task {
+  id: string;
+  text: string;
+  isComplete: boolean;
+}
 
 function App() {
   let content 
 
-  if(task.length){
-    content = task.map(item => {
+  const [tasks, setTasks] = useState<Task[]>([])
+
+  function onCreateNewTask(newTask:string){    
+    setTasks([...tasks,{'id':uuidv4(), 'text':newTask, 'isComplete': false}])
+  }
+
+  function onDeleteTask(text:string){
+    let NewArray = tasks.filter(task => task.text !== text);
+ 
+    setTasks(NewArray)
+  }
+
+  function onUpdateTask(text:string){
+    let UpdateArray = tasks.map((item) => {
+        if(item.text === text){
+          if(item.isComplete === true)
+            item.isComplete = false;
+          else
+            item.isComplete = true;
+          console.log(item)
+        }
+
+        return item
+    })
+
+    setTasks(UpdateArray)
+  }
+
+  if(tasks.length){
+    content = tasks.map(item => {
       return <ListTask 
           key={item.id}
-          // content={item.text}
+          content={item.text}
+          isComplete={item.isComplete}
+          OnDelete={onDeleteTask}
+          onUpdate={onUpdateTask}
       />
-  })
+    })
   }else{
     content = <NotTask/>
   }
@@ -36,7 +64,7 @@ function App() {
     <>
       <Header/>
       <main className={styles.container}>
-        <NewTask/>
+        <NewTask onSetTasks={onCreateNewTask} />
         <Task/>
         {content}
       </main>
