@@ -21,7 +21,7 @@ E esse projeto pretende aprimora os conhecimentos adquirido no primeiro capítul
 
 ### Sobre o desafio:
 
-- Neste desafio devemos adicionar algumas funcionalidades no template de um aplicação tasklist:
+- Neste desafio devemos adicionar algumas funcionalidades de um aplicação tasklist:
     - Adicionar uma nova tarefa
     - Marcar e desmarcar uma tarefa como concluída
     - Remover uma tarefa da listagem
