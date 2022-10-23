@@ -3,6 +3,7 @@
 
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .newsTask{
@@ -37,3 +38,13 @@
     color: var(--purple);
 }
 
+@media(max-width: 19.375rem){
+    .list{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .list > div{
+        margin-bottom: 1rem;
+    }
+}

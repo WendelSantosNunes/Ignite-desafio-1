@@ -1,4 +1,4 @@
-import { Circle, Trash, CheckCircle } from "phosphor-react";
+import { Circle, Trash } from "phosphor-react";
 import styles from './ListTask.module.css'
 
 import imgCheckCicle from '../assets/check.svg'
